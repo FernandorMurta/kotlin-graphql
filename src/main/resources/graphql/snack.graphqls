@@ -1,0 +1,17 @@
+type Query{
+    snacks: [Snack]
+    totalAmount: Float
+}
+
+type Snack {
+    id: ID!
+    name: String
+    amount: Float
+    reviews: [Review]
+}
+
+type Mutation {
+    newSnack(name: String!, amount: Float!): Snack!
+    deleteSnack(id: ID!): Boolean
+    updateSnack(id: ID!, amount: Float!): Snack!
+}
